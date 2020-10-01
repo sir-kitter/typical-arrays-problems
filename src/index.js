@@ -1,7 +1,7 @@
 exports.min = function min(array) {
     if (Array.isArray(array)) {
         if (array.length === 0) return 0
-        return array.reduce((prevValue, currentValue) => prevValue < currentValue ? prevValue : currentValue, array[0])
+		return Math.min.apply(null, array)
     }
 	return 0
 }
@@ -9,7 +9,7 @@ exports.min = function min(array) {
 exports.max = function max(array) {
     if (Array.isArray(array)) {
         if (array.length === 0) return 0
-        return array.reduce((prevValue, currentValue) => prevValue > currentValue ? prevValue : currentValue, array[0])
+        return Math.max.apply(null, array)
     }
     return 0
 }
